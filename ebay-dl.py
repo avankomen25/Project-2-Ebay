@@ -4,8 +4,6 @@ from bs4 import BeautifulSoup
 import random
 import json
 
-
-
 def parse_itemssold(text):
     '''
     Takes input as string and returns number of items sold as specified in the string
@@ -65,7 +63,7 @@ def parse_shipping(text):
         return None
 
 if __name__ == '__main__':
-
+    # Randomizes user agent to avoid bot detection
     user_agent_list = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/137.0.0.0 Safari/537.36",
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0",
@@ -106,13 +104,10 @@ if __name__ == '__main__':
         status = r.status_code
         print('status=', status)
         html = r.text
-        #print('html=', html[:500])
 
         # processes html
         soup = BeautifulSoup(html, 'html.parser')
         
-        
-
         tags_items = soup.select('.s-card') 
         for tag_item in tags_items: 
             
@@ -176,7 +171,7 @@ if __name__ == '__main__':
             items.append(item)
 
         print('len(tags_items)=', len(tags_items))
-
+    # prints number of total items scraped
     print('len(items)=', len(items))
 
     # makes json file or csv file
