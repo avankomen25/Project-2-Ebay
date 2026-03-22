@@ -114,10 +114,7 @@ if __name__ == '__main__':
         
 
         tags_items = soup.select('.s-card') 
-        #print('len(tags_items)=', len(tags_items))
-        #print('html snippet=', r.text[:500])
-        for tag_item in tags_items:
-            # print('tag_item=', tag_item) 
+        for tag_item in tags_items: 
             
             # extract names
             tags_name = tag_item.select('.s-card__title')
@@ -130,8 +127,6 @@ if __name__ == '__main__':
 
             if name == 'Shop on eBay':
                 continue
-
-            # print('attribute spans:', [tag.get_text(strip=True) for tag in tag_item.select('.s-card__attribute-row span')])
 
             # extract free returns
             freereturns = False
@@ -183,9 +178,6 @@ if __name__ == '__main__':
         print('len(tags_items)=', len(tags_items))
 
     print('len(items)=', len(items))
-
-    # for item in items:
-        # print('item=', item)
 
     # makes json file or csv file
     if args.csv:
