@@ -1,7 +1,7 @@
 # eBay Scraper
  
 ## What it does
-`ebay-dl.py` is a command line tool that scrapes eBay search results and saves the data as a JSON or CSV file. For a given search term, it downloads up to 10 pages of results and extracts the following information for each item:
+`ebay-dl.py` is a command line tool that scrapes eBay search results and saves the data as a JSON or CSV file. For a given search term, it downloads a default of 10 pages of results and extracts the following information for each item:
  
 - **name** — the item's title
 - **price** — the price in cents (integer)
