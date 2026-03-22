@@ -15,36 +15,38 @@
 You can also specify how many pages of results to scrape (default is 10) by adding `--num_pages='number'`:
  
 ```
-python3 ebay-dl.py laptop --num_pages=5
+$ python3 ebay-dl.py laptop --num_pages=5
 ```
  
 Generate JSON files:
  
 ```
-python3 ebay-dl.py laptop --num_pages=10
+$ python3 ebay-dl.py laptop --num_pages=10
 ```
  
 ```
-python3 ebay-dl.py hammer --num_pages=10
+$ python3 ebay-dl.py hammer --num_pages=10
 ```
  
 ```
-python3 ebay-dl.py 'stuffed animal' --num_pages=10
+$ python3 ebay-dl.py 'stuffed animal' --num_pages=10
 ```
  
 Generate CSV files by adding `--csv` :
  
 ```
-python3 ebay-dl.py laptop --num_pages=10 --csv
+$ python3 ebay-dl.py laptop --num_pages=10 --csv
 ```
  
 ```
-python3 ebay-dl.py hammer --num_pages=10 --csv
+$ python3 ebay-dl.py hammer --num_pages=10 --csv
 ```
  
 ```
-python3 ebay-dl.py 'stuffed animal' --num_pages=10 --csv
+$ python3 ebay-dl.py 'stuffed animal' --num_pages=10 --csv
 ```
- 
+
+*NOTE: eBay's bot protection software likes to block your IP address if you do too many searches, so try using a VPN when running the webscraping code. Otherwise, waiting a bit before your next search can help get past this.*
+
 ## Course Project Link
 [Course Project](https://github.com/mikeizbicki/cmc-csci040/tree/2026spring/project_02_webscraping)
